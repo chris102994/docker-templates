@@ -17,7 +17,7 @@
   <Category>Network:FTP</Category>
   <WebUI>http://[IP]:[PORT:5700]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/filezilla.xml</TemplateURL>
-  <Icon>https://upload.wikimedia.org/wikipedia/commons/0/01/FileZilla_logo.svg/</Icon>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/0/01/FileZilla_logo.svg</Icon>
   <ExtraParams/>
   <Description>
     FileZilla is a cross-platform graphical FTP/S and S/FTP file management tool.
