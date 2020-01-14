@@ -11,6 +11,7 @@
     [br][br][span][/span]
   </Overview>
   <Category>Network:SFTP</Category>
+   <WebUI>http://[IP]:[XTEVE_PORT:34400]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/xteve.xml</TemplateURL>
   <Icon>https://repository-images.githubusercontent.com/199413814/f26b8300-b564-11e9-9e8d-196438cee819</Icon>
   <ExtraParams/>
