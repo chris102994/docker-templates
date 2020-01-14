@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FileZilla</Name>
+  <Repository>christopher102994/docker-filezilla</Repository>
+  <Registry>https://hub.docker.com/r/christopher102994/docker-filezilla</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Overview>
+    FileZilla is a cross-platform graphical FTP/S and S/FTP file management tool.
+    [br][br]
+    The GUI of the application is accessed through a web browser.
+    Based on Alpine Linux so the container size
+    is very small (less than 100MB in download size).
+    [br][br][span][/span]
+  </Overview>
+  <Category>Network:FTP</Category>
+  <WebUI>http://[IP]:[PORT:5700]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/filezilla.xml</TemplateURL>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/0/01/FileZilla_logo.svg/</Icon>
+  <ExtraParams/>
+  <Description>
+    FileZilla is a cross-platform graphical FTP/S and S/FTP file management tool.
+    [br][br]
+    The GUI of the application is accessed through a web browser.
+    Based on Alpine Linux so the container size
+    is very small (less than 100MB in download size).
+    [br][br][span][/span]
+  </Description>
+  <Beta>False</Beta>
+  <Project>https://filezilla-project.org/</Project>
+  <Date>2019-12-25</Date>
+
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5700</HostPort>
+        <ContainerPort>5700</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/filezilla</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>USER_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GROUP_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1280</Value>
+      <Name>DISPLAY_WIDTH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>720</Value>
+      <Name>DISPLAY_HEIGHT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <!-- Volume Mappings -->
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/filezilla" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Storage" Target="/mnt" Default="/data" Mode="rw" Description="This location contains files from your host that need to be accessible by the application.&amp;lt;br&amp;gt;Container path: /storage" Type="Path" Display="always-hide" Required="true" Mask="false"/>
+  <!-- Variable Mappings -->
+  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Display Width" Target="DISPLAY_WIDTH" Default="1280" Mode="" Description="Width (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Display Height" Target="DISPLAY_HEIGHT" Default="768" Mode="" Description="Height (in pixels) of the application's window." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <!-- Port Mappings -->
+  <Config Name="WEB Port for GUI" Target="5700" Default="5700" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
+  <DonateLink></DonateLink>
+  <DonateImg></DonateImg>
+</Container>
