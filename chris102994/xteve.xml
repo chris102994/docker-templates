@@ -27,8 +27,8 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>34400</HostPort>
-        <ContainerPort>34400</ContainerPort>
+        <HostPort>XTEVE_PORT</HostPort>
+        <ContainerPort>XTEVE_PORT</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -64,7 +64,8 @@
   <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="The application's logging level." Type="Variable" Display="advamced-hide" Required="false" Mask="false"/>
   <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
   <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
-
+  <!-- Port Mappings -->
+  <Config Name="WEB Port for GUI" Target="XTEVE_PORT" Default="XTEVE_PORT" Mode="tcp" Description="Port used to access the application's GUI via the web interface." Type="Port" Display="advanced-hide" Required="true" Mask="false"/>
   <DonateLink></DonateLink>
   <DonateImg></DonateImg>
 </Container>
