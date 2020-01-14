@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>FileZilla</Name>
+  <Name>OpenSSH</Name>
   <Repository>christopher102994/docker-openssh-sftp-server:alpine-3.10</Repository>
   <Registry>https://hub.docker.com/r/christopher102994/docker-openssh-sftp-server</Registry>
   <Network>bridge</Network>
