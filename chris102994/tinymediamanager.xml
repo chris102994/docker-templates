@@ -14,10 +14,10 @@
     is very small (less than 100MB in download size).
     [br][br][span][/span]
   </Overview>
-  <Category>Network:FTP</Category>
+  <Category>Media Applications:Other</Category>
   <WebUI>http://[IP]:[PORT:5700]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/filezilla.xml</TemplateURL>
-  <Icon>https://upload.wikimedia.org/wikipedia/commons/0/01/FileZilla_logo.svg</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/tinymediamanager.xml</TemplateURL>
+  <Icon>https://www.tinymediamanager.org/](https://gitlab.com/uploads/-/system/user/avatar/2501205/avatar.png?width=400</Icon>
   <ExtraParams/>
   <Description>
     Tiny Media Manager is a media management tool written in Java/Swing. It is written to provide metadata for the Kodi Media Center (formerly known as XBMC), MediaPortal and Plex media server.
