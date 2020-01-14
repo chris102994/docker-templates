@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>FileZilla</Name>
-  <Repository>christopher102994/docker-filezilla</Repository>
+  <Repository>christopher102994/docker-filezilla:alpine-3.10</Repository>
   <Registry>https://hub.docker.com/r/christopher102994/docker-filezilla</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
