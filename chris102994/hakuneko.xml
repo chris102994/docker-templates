@@ -16,7 +16,7 @@
   <Category>Media Applications:Other</Category>
   <WebUI>http://[IP]:[PORT:5700]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/hakuneko.xml</TemplateURL>
-  <Icon>https://avatars0.githubusercontent.com/u/37013765?s=200&v=4</Icon>
+  <Icon>https://avatars0.githubusercontent.com/u/37013765?s=200</Icon>
   <ExtraParams/>
   <Description>
     HakuNeko is a Manga and Anime Downloader for Linux, Windows and MacOS
