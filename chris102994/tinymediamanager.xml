@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>tinyMediaManager</Name>
-  <Repository>christopher102994/docker-tinymediamanager:alpine-3.10</Repository>
+  <Repository>christopher102994/docker-tinymediamanager:latest</Repository>
   <Registry>https://hub.docker.com/r/christopher102994/docker-tinymediamanager</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>

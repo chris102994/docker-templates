@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>xTeVe</Name>
-  <Repository>christopher102994/docker-xteve:alpine-3.10</Repository>
+  <Repository>christopher102994/docker-xteve:alpine-3.10-latest</Repository>
   <Registry>https://hub.docker.com/r/christopher102994/docker-xteve</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
