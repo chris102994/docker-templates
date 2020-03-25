@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>musicbrainzpicard</Name>
-  <Repository>christopher102994/docker-musicbrainzpicard:debian-10</Repository>
+  <Repository>christopher102994/docker-musicbrainzpicard:latest</Repository>
   <Registry>https://hub.docker.com/r/christopher102994/docker-musicbrainzpicard</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
