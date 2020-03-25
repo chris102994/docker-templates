@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>hakuneko</Name>
-  <Repository>christopher102994/docker-hakuneko:debian-10</Repository>
+  <Repository>christopher102994/docker-hakuneko:latest</Repository>
   <Registry>https://hub.docker.com/r/christopher102994/docker-hakuneko</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
