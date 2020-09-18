@@ -7,7 +7,7 @@
   <Privileged>false</Privileged>
   <Support></Support>
   <Overview>
-    xTeVe is a M3U Proxy for Plex DVR and Emby Live TV.
+      	This is a EPG and m3u scraper for the popular Toonami Aftermath channel so that it can integrate into Emby and Plex through the popular xTeVe project.
     [br][br][span][/span]
   </Overview>
   <Category>MediaServer:Video</Category>
@@ -16,8 +16,6 @@
   <Icon>https://vignette.wikia.nocookie.net/toonami/images/0/0f/Toonami_aftermath_logo.png/revision/latest?cb=20121120205018</Icon>
   <ExtraParams/>
   <Description>
-  	This is a EPG and m3u scraper for the popular Toonami Aftermath channel so that it can integrate into Emby and Plex through the popular xTeVe project.
-
     Toonami Aftermath is a Toonami revival effort, which began as a 24/7 stream, launched on January 18, 2010 with its website appearing a few months after that. It airs programs that have been broadcast on Toonami, and also Cartoon Network, Fox, and Kids WB, such as Ronin Warriors, Cartoon Cartoons, X-Men: The Animated Series, and Pokemon. 
     [br][br][span][/span]
   </Description>
