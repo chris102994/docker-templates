@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>xTeVe</Name>
-  <Repository>christopher102994/docker-xteve:alpine-3.10-latest</Repository>
-  <Registry>https://hub.docker.com/r/christopher102994/docker-xteve</Registry>
+  <Name>toonamiaftermath</Name>
+  <Repository>christopher102994/docker-toonamiaftermath:alpine-3.10-latest</Repository>
+  <Registry>https://hub.docker.com/r/christopher102994/docker-toonamiaftermath</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support></Support>
@@ -12,16 +12,18 @@
   </Overview>
   <Category>MediaServer:Video</Category>
    <WebUI>http://[IP]:[XTEVE_PORT:34400]/web/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/xteve.xml</TemplateURL>
-  <Icon>https://repository-images.githubusercontent.com/199413814/f26b8300-b564-11e9-9e8d-196438cee819</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/toonamiaftermath.xml</TemplateURL>
+  <Icon>https://vignette.wikia.nocookie.net/toonami/images/0/0f/Toonami_aftermath_logo.png/revision/latest?cb=20121120205018</Icon>
   <ExtraParams/>
   <Description>
-    xTeVe is a M3U Proxy for Plex DVR and Emby Live TV.
+  	This is a EPG and m3u scraper for the popular Toonami Aftermath channel so that it can integrate into Emby and Plex through the popular xTeVe project.
+
+    Toonami Aftermath is a Toonami revival effort, which began as a 24/7 stream, launched on January 18, 2010 with its website appearing a few months after that. It airs programs that have been broadcast on Toonami, and also Cartoon Network, Fox, and Kids WB, such as Ronin Warriors, Cartoon Cartoons, X-Men: The Animated Series, and Pokemon. 
     [br][br][span][/span]
   </Description>
   <Beta>False</Beta>
-  <Project>https://xteve.de/</Project>
-  <Date>2020-01-13</Date>
+  <Project>https://www.toonamiaftermath.com/</Project>
+  <Date>2020-09-17</Date>
 
   <Networking>
     <Mode>bridge</Mode>
@@ -35,7 +37,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/xteve</HostDir>
+      <HostDir>/mnt/user/appdata/toonamiaftermath</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -58,7 +60,7 @@
     </Variable>
   </Environment>
   <!-- Volume Mappings -->
-  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/xteve" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/toonamiaftermath" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
   <!-- Variable Mappings -->
   <Config Name="xTeVe Port" Target="XTEVE_PORT" Default="34400" Mode="" Description=" This must match the port you map to the container so that xteve can correctly forward the stream." Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="The application's logging level." Type="Variable" Display="advamced-hide" Required="false" Mask="false"/>
