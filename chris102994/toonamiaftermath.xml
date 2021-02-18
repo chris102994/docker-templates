@@ -1,71 +1,70 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>toonamiaftermath</Name>
-  <Repository>christopher102994/docker-toonamiaftermath:alpine-3.10-latest</Repository>
-  <Registry>https://hub.docker.com/r/christopher102994/docker-toonamiaftermath</Registry>
-  <Network>bridge</Network>
+  <Repository>christopher102994/docker-toonamiaftermath:ubuntu-18-latest</Repository>
+  <Registry/>
+  <Network>dns_net</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support></Support>
-  <Overview>
-      	This is a EPG and m3u scraper for the popular Toonami Aftermath channel so that it can integrate into Emby and Plex through the popular xTeVe project.
-    [br][br][span][/span]
-  </Overview>
-  <Category>MediaServer:Video</Category>
-   <WebUI>http://[IP]:[XTEVE_PORT:34400]/web/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/chris102994/docker-templates/master/chris102994/toonamiaftermath.xml</TemplateURL>
-  <Icon>https://vignette.wikia.nocookie.net/toonami/images/0/0f/Toonami_aftermath_logo.png/revision/latest?cb=20121120205018</Icon>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>https://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL/>
+  <Icon/>
   <ExtraParams/>
-  <Description>
-    Toonami Aftermath is a Toonami revival effort, which began as a 24/7 stream, launched on January 18, 2010 with its website appearing a few months after that. It airs programs that have been broadcast on Toonami, and also Cartoon Network, Fox, and Kids WB, such as Ronin Warriors, Cartoon Cartoons, X-Men: The Animated Series, and Pokemon. 
-    [br][br][span][/span]
-  </Description>
-  <Beta>False</Beta>
-  <Project>https://www.toonamiaftermath.com/</Project>
-  <Date>2020-09-17</Date>
-
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1613687587</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
   <Networking>
-    <Mode>bridge</Mode>
+    <Mode>dns_net</Mode>
     <Publish>
       <Port>
-        <HostPort>XTEVE_PORT</HostPort>
-        <ContainerPort>XTEVE_PORT</ContainerPort>
+        <HostPort>8888</HostPort>
+        <ContainerPort>8000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/toonamiaftermath</HostDir>
+      <HostDir>/mnt/user/appdata/toonamiaftermath/config</HostDir>
       <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/toonamiaftermath/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>34400</Value>
-      <Name>XTEVE_PORT</Name>
+      <Value>200</Value>
+      <Name>GUIDE_ITEMS_PER_CHANNEL</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>99</Value>
-      <Name>USER_ID</Name>
+      <Value>ERROR</Value>
+      <Name>LOG_LEVEL</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>100</Value>
-      <Name>GROUP_ID</Name>
+      <Value>True</Value>
+      <Name>USE_EPISODE_CACHE</Name>
       <Mode/>
     </Variable>
   </Environment>
-  <!-- Volume Mappings -->
-  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/toonamiaftermath" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.&amp;lt;br&amp;gt;Container path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
-  <!-- Variable Mappings -->
-  <Config Name="xTeVe Port" Target="XTEVE_PORT" Default="34400" Mode="" Description=" This must match the port you map to the container so that xteve can correctly forward the stream." Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Log Level" Target="LOG_LEVEL" Default="INFO" Mode="" Description="The application's logging level." Type="Variable" Display="advamced-hide" Required="false" Mask="false"/>
-  <Config Name="User ID" Target="USER_ID" Default="99" Mode="" Description="ID of the user the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
-  <Config Name="Group ID" Target="GROUP_ID" Default="100" Mode="" Description="ID of the group the application runs as." Type="Variable" Display="advanced-hide" Required="true" Mask="false"/>
-  <!-- Port Mappings -->
-  <Config Name="WEB Port for GUI" Target="34400" Default="34400" Mode="tcp" Description="Port used to access the application's GUI via the web interface. - Both MUST match the XTEVE_PORT variable." Type="Port" Display="always" Required="true" Mask="false"/>
-  <DonateLink></DonateLink>
-  <DonateImg></DonateImg>
+  <Labels/>
+  <Config Name="CONFIG DIR" Target="/config" Default="" Mode="rw" Description="The directory where the application will store configuration information." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/toonamiaftermath/config</Config>
+  <Config Name="DATA DIR" Target="/data" Default="" Mode="rw" Description="The directory where the application will store configuration information." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/toonamiaftermath/data</Config>
+  <Config Name="GUIDE_ITEMS_PER_CHANNEL" Target="GUIDE_ITEMS_PER_CHANNEL" Default="" Mode="" Description="The number of guide items to get for each channel. This grabs guide items from the beginning of the day. If too low then it might not grab enough to see. If too high then it will take a long time to do the first run. (Default 200)" Type="Variable" Display="always" Required="false" Mask="false">200</Config>
+  <Config Name="PORT" Target="8000" Default="8000" Mode="tcp" Description="This is the port inside the container by default however, you can map the outside port to be the same as the inner port. (Default 8000)" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="ERROR" Mode="" Description="The Python Logging log level for the TA Scraper. (Default ERROR)&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">ERROR</Config>
+  <Config Name="USE_EPISODE_CACHE" Target="USE_EPISODE_CACHE" Default="True" Mode="" Description="Cache the episode data that is scraped from TA. This will make future runs faster. (Default True)" Type="Variable" Display="always" Required="false" Mask="false">True</Config>
 </Container>
