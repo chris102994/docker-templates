@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>plutotv</Name>
+  <Repository>christopher102994/docker-plutotv:ubuntu-18-latest</Repository>
+  <Registry/>
+  <Network>dns_net</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>https://[IP]:[PORT:8000]/</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1613687587</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>dns_net</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8888</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/plutotv/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/plutotv/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>ERROR</Value>
+      <Name>LOG_LEVEL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="CONFIG DIR" Target="/config" Default="" Mode="rw" Description="The directory where the application will store configuration information." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/plutotv/config</Config>
+  <Config Name="DATA DIR" Target="/data" Default="" Mode="rw" Description="The directory where the application will store configuration information." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/plutotv/data</Config>
+  <Config Name="PORT" Target="8000" Default="8000" Mode="tcp" Description="This is the port inside the container by default however, you can map the outside port to be the same as the inner port. (Default 8000)" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
+  <Config Name="LOG_LEVEL" Target="LOG_LEVEL" Default="ERROR" Mode="" Description="The Python Logging log level for the TA Scraper. (Default ERROR)&#13;&#10;" Type="Variable" Display="always" Required="false" Mask="false">ERROR</Config>
+</Container>
