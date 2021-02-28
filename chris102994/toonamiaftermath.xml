@@ -3,7 +3,7 @@
   <Name>toonamiaftermath</Name>
   <Repository>christopher102994/docker-toonamiaftermath:ubuntu-18-latest</Repository>
   <Registry/>
-  <Network>dns_net</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -22,7 +22,7 @@
   <DonateLink/>
   <Description/>
   <Networking>
-    <Mode>dns_net</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort>8888</HostPort>
